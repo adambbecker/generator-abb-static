@@ -1,6 +1,8 @@
 # generator-abb-static
 
-A static site generator for [Yeoman](http://yeoman.io). This particular generator is a compilation of plugins, scaffolding, etc. that currently works well for [myself](http://adambbecker.com) and is made available for anyone else that might find it useful.
+A static site generator for [Yeoman](http://yeoman.io).
+
+This particular generator is a compilation of plugins, scaffolding, etc. that currently works well for [myself](http://adambbecker.com) and is made available for anyone else that might find it useful.
 
 
 ## Getting Started
