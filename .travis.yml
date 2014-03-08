@@ -1,0 +1,8 @@
+language: node_js
+node_js:
+  - '0.8'
+  - '0.10'
+before_install:
+  - currentfolder=${PWD##*/}
+  - if [ "$currentfolder" != 'generator-abb-static' ]; then cd .. && eval "mv $currentfolder generator-abb-static" && cd generator-abb-static; fi
+
