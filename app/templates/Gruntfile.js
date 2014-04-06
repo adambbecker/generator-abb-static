@@ -11,14 +11,14 @@ grunt.initConfig({
 			}
 		}
 	},
-	
+
 	sass: {
     main: {
       options: { outputStyle: 'expanded' },
       files: { 'assets/css/screen.css':'assets/scss/screen.scss' }
     }
   },
-  
+
   autoprefixer: {
     main: {
       options: {
@@ -28,7 +28,7 @@ grunt.initConfig({
       dest: 'assets/css/screen.css'
     }
   },
-  
+
   mincss: {
     main: {
       files: {
@@ -36,14 +36,14 @@ grunt.initConfig({
       }
     }
   },
-  
+
   watch: {
     styles: {
       files: ['assets/scss/**/*.*'],
       tasks: ['sass', 'autoprefixer']
     }
   },
-  
+
   modernizr: {
 
     // [REQUIRED] Path to the build you're using for development.
@@ -97,7 +97,7 @@ grunt.initConfig({
     // Have custom Modernizr tests? Add paths to their location here.
     'customTests' : []
   }
-  
+
 });
 
 grunt.loadNpmTasks('grunt-sass');
@@ -107,8 +107,8 @@ grunt.loadNpmTasks('grunt-contrib-mincss');
 grunt.loadNpmTasks('grunt-autoprefixer');
 grunt.loadNpmTasks('grunt-modernizr');
 
-grunt.registerTask('lib', [ 'uglify', 'modernizr' ]);
-grunt.registerTask('dev', [ 'lib', 'sass', 'autoprefixer' ]);
+grunt.registerTask('dev', [ 'sass', 'autoprefixer' ]);
+grunt.registerTask('setup', [ 'uglify', 'modernizr', 'dev' ]);
 grunt.registerTask('prod', [ 'setup', 'mincss' ]);
 grunt.registerTask('default', [ 'dev', 'watch' ]);
 

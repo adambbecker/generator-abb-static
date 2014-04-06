@@ -43,16 +43,16 @@ AbbStaticGenerator.prototype.app = function app() {
   this.mkdir('assets/js');
   this.mkdir('assets/js/lib');
   this.mkdir('assets/js/app');
-  
+
   this.copy('_package.json', 'package.json');
   this.copy('_bower.json', 'bower.json');
   this.copy('Gruntfile.js', 'Gruntfile.js');
   this.copy('app.js', 'assets/js/app.js');
-  
-  this.copy('normalize.scss', 'assets/scss/normalize.scss');
+
+  this.copy('reset.scss', 'assets/scss/reset.scss');
   this.copy('vars.scss', 'assets/scss/vars.scss');
   this.copy('mixins.scss', 'assets/scss/mixins.scss');
-  
+
   this.template('screen.scss', 'assets/scss/screen.scss');
   this.template('index.html', 'index.html');
   this.template('README.md', 'README.md');
