@@ -6,14 +6,14 @@
 	Author URI: http://adambbecker.com
 	License: GNU General Public License version 3.0
 	License URI: http://www.gnu.org/licenses/gpl-3.0.html
-	Version: 0.0.1
+	Version: 0.0.0
 
 	All files, unless otherwise stated, are released under the GNU General Public
 	License version 3.0 (http://www.gnu.org/licenses/gpl-3.0.html)
 
 ==================================================================================
 
-	0.  CSS Normalize
+	0.  CSS Reset
 	1.  General Set Up & Type
 
 ==================================================================================*/
@@ -24,7 +24,7 @@
 /*--------------------------------------------------------------------------------*/
 /*	0.  CSS Reset - insert your preferred reset below
 /*--------------------------------------------------------------------------------*/
-@import "rest.scss";
+@import "reset.scss";
 
 
 /*--------------------------------------------------------------------------------*/

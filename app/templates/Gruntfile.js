@@ -2,20 +2,14 @@ module.exports = function(grunt) {
 
 grunt.initConfig({
 
-	uglify: {
-		lib: {
-			files: {
-				'assets/js/lib.js': [
-					'bower_components/underscore/underscore.js'
-				]
-			}
-		}
-	},
-
 	sass: {
     main: {
-      options: { outputStyle: 'expanded' },
-      files: { 'assets/css/screen.css':'assets/scss/screen.scss' }
+      options: {
+				style: 'expanded'
+			},
+      files: {
+				'assets/css/screen.css': 'assets/scss/screen.scss'
+			}
     }
   },
 
@@ -29,7 +23,7 @@ grunt.initConfig({
     }
   },
 
-  mincss: {
+  cssmin: {
     main: {
       files: {
         'assets/css/screen.css':'assets/css/screen.css'
@@ -100,16 +94,15 @@ grunt.initConfig({
 
 });
 
-grunt.loadNpmTasks('grunt-sass');
-grunt.loadNpmTasks('grunt-contrib-uglify');
+grunt.loadNpmTasks('grunt-contrib-sass');
 grunt.loadNpmTasks('grunt-contrib-watch');
-grunt.loadNpmTasks('grunt-contrib-mincss');
+grunt.loadNpmTasks('grunt-contrib-cssmin');
 grunt.loadNpmTasks('grunt-autoprefixer');
 grunt.loadNpmTasks('grunt-modernizr');
 
 grunt.registerTask('dev', [ 'sass', 'autoprefixer' ]);
-grunt.registerTask('setup', [ 'uglify', 'modernizr', 'dev' ]);
-grunt.registerTask('prod', [ 'setup', 'mincss' ]);
+grunt.registerTask('setup', [ 'modernizr', 'dev' ]);
+grunt.registerTask('prod', [ 'setup', 'cssmin' ]);
 grunt.registerTask('default', [ 'dev', 'watch' ]);
 
 };
