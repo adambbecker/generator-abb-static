@@ -1,3 +1,4 @@
 node_modules
 .sass-cache
 *.log
+bower_components
